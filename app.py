@@ -13,10 +13,10 @@ def index():
 
 __data_columns=None
 __model=None
-with open('Assignment3/columns.json','r') as f:
+with open('columns.json','r') as f:
     __data_columns=json.load(f)['data_columns']
 
-with open('Assignment3/Loan_prediction_model.pickle','rb') as f1:
+with open('Loan_prediction_model.pickle','rb') as f1:
     __model=pickle.load(f1)
 print("loading artifacts done")
 
