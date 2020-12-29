@@ -83,7 +83,7 @@ function onClickedEstimateStatus(){
   var propertyarea=getPropertyAreaValue();
   var estStatus=document.getElementById("uiEstimatedStatus");
   var url="http://127.0.0.1:5000/predict_loan_status";
-  console.log(gender);
+
 
   $.post(url,{
     Gender:gender,
@@ -107,7 +107,7 @@ function onClickedEstimateStatus(){
         s+="Congratulations, You have recieved the Loan"
       }
       estStatus.innerHTML="<h2>"+s.toString()+"</h2>";
-      console.log(status);
+      console.log(s);
 
     }
   );
