@@ -4,7 +4,7 @@ import pickle
 import sklearn
 import numpy as np
 
-app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="../client")
+app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="/client")
 
 @app.route('/', methods=['GET'])
 def index():
