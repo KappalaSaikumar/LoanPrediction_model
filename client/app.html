@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bengaluru House Price Prediction</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../client/app.js"></script>
+	<link rel="stylesheet" href="../client/app.css">
+  <!--<script type="text/javascript" src="{{ url_for('static',filename='app.js') }}"></script>
+	  <link rel="stylesheet"  href= "{{ url_for('static',filename='app.css') }}">-->
+</head>
+  <body>
+
+    <form class="form">
+      <h2>Gender</h2>
+      <div class="switch-field">
+        <input type="radio" id="radio-gender-1" name="uiG" value="0"/>
+        <label for="radio-gender-1">Female</label>
+        <input type="radio" id="radio-gender-2" name="uiG" value="1" checked/>
+        <label for="radio-gender-2">Male</label>
+      </div>
+    </form>
+
+      <form class="form">
+        <h2>Married</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-married-1" name="uiMarried" value="0"/>
+          <label for="radio-married-1">No</label>
+          <input type="radio" id="radio-married-2" name="uiMarried" value="1" checked/>
+		      <label for="radio-married-2">Yes</label>
+        </div>
+      </form>
+
+      <form class="form">
+        <h2>Dependents</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-dependents-1" name="uiDependents" value="0"/>
+		      <label for="radio-dependents-0">0</label>
+          <input type="radio" id="radio-dependents-1" name="uiDependents" value="1"/>
+		      <label for="radio-dependents-1">1</label>
+		      <input type="radio" id="radio-dependents-2" name="uiDependents" value="2" checked/>
+		      <label for="radio-dependents-2">2</label>
+		      <input type="radio" id="radio-dependents-3" name="uiDependents" value="3"/>
+		      <label for="radio-dependents-3">3 or 3+</label>
+        </div>
+
+      <form class="form">
+        <h2>Education</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-education-1" name="uiEducation" value="0"/>
+          <label for="radio-married-1">Graduate</label>
+          <input type="radio" id="radio-education-2" name="uiEducation" value="1" checked/>
+  		    <label for="radio-education-2">Not Graduate</label>
+        </div>
+      </form>
+
+      <form class="form">
+        <h2>Self-Employed</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-selfemp-1" name="uiSelf_employed" value="1"/>
+          <label for="radio-selfemp-1">Yes</label>
+          <input type="radio" id="radio-selfemp-2" name="uiSelf_employed" value="0" checked/>
+  		    <label for="radio-selfemp-2">No</label>
+        </div>
+      </form>
+
+      <div class="img"></div>
+      <form class="form">
+        <h2>Applicant Income</h2>
+        <input class="area" type="email" id="uiapp_income" class="floatlabel" name="Applicant_Income" value="1000">
+      </form>
+
+      <div class="img"></div>
+      <form class="form">
+        <h2>CoApplicant Income</h2>
+        <input class="area" type="email" id="uicoapp_income" class="floatlabel" name="CoApplicant_Income" value="1000">
+      </form>
+
+      <div class="img"></div>
+      <form class="form">
+        <h2>Loan Amount</h2>
+        <input class="area" type="email" id="uiloanamt" class="floatlabel" name="Loan_Amount" value="100">
+      </form>
+
+      <div class="img"></div>
+      <form class="form">
+        <h2>Loan Amount Term</h2>
+        <input class="area" type="email" id="uiloanamtTerm" class="floatlabel" name="Loan_AMount_Term" value="0">
+      </form>
+
+      <form class="form">
+        <h2>Credit History</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-credhis-1" name="uiCredit_History" value="0"/>
+          <label for="radio-credhis-1">No</label>
+          <input type="radio" id="radio-credhis-2" name="uiCredit_History" value="1" checked/>
+  		    <label for="radio-credhis-2">Yes</label>
+        </div>
+      </form>
+
+      <form class="form">
+        <h2>Property Area</h2>
+        <div class="switch-field">
+          <input type="radio" id="radio-proparea-1" name="uiProperty_Area" value="0"/>
+		      <label for="radio-proparea-1">Rural</label>
+          <input type="radio" id="radio-proparea-2" name="uiProperty_Area" value="1"/>
+		      <label for="radio-proparea-2">Semi-Urban</label>
+		      <input type="radio" id="radio-proparea-2" name="uiProperty_Area" value="2" checked/>
+		      <label for="radio-proparea-3">Urban</label>
+        </div>
+      </form>
+
+        <button class="submit" onclick="onClickedEstimateStatus()" type="button">Estimate Status</button>
+        <div id="uiEstimatedStatus" class="result"> <h2></h2></div>
+  </body>
+</html>
