@@ -6,10 +6,9 @@ import numpy as np
 
 app = Flask(__name__, static_url_path="/client", static_folder='../client', template_folder="/client")
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index():
-    if request.method=="GET":
-        return render_template("app.html")
+    return render_template("app.html")
 
 __data_columns=None
 __model=None
